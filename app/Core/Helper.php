@@ -35,7 +35,7 @@ function flashMessage() {
             unset($_SESSION['context']);
         }
         return '<div class="alert alert-'
-            . $context .'" role="alert">' . $message . '</div>';
+            . $context .'" role="alert">' . h($message) . '</div>';
     }
     return '';
 }
