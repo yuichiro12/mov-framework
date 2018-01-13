@@ -1,5 +1,6 @@
 .env
 .DS_Store
+GPATH
+GRTAGS
+GTAGS
 /vendor/
-/public/image/posts/
-/public/image/users/
