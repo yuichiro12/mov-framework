@@ -2,7 +2,6 @@
 namespace app\Controller;
 
 use app\Core\Session;
-use app\Model\Users;
 
 class Controller
 {
@@ -52,11 +51,11 @@ class Controller
         exit();
     }
 
-    public function callAction($route) {
+    public function callAction($route, $param=null) {
         $prefix = __NAMESPACE__ . '\\';
         $class = $prefix . ucfirst($route['controller']) . 'Controller';
         $controller = new $class;
-        return $controller->{$route['action']}();
+        return $controller->{$route['action']}($param);
     }
 
     public function isLogin() {
